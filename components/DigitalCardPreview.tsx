@@ -59,7 +59,7 @@ export default function DigitalCardPreview({ card }: { card: Card }) {
           {heading}
         </h3>
         <p
-          className="mt-3 text-sm leading-relaxed text-white/95 drop-shadow"
+          className="mt-3 text-sm leading-relaxed text-white/95 drop-shadow whitespace-pre-wrap"
           style={{ color: textColor }}
         >
           {content}
