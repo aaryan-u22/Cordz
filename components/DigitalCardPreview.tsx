@@ -200,6 +200,117 @@ export default function DigitalCardPreview({ card }: { card: Card }) {
             <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/40 to-transparent" />
           </>
         );
+      case "letter":
+        return (
+          <>
+            <div className="absolute inset-0 bg-white/6" />
+            <div className="absolute inset-4 border border-white/20 rounded-xl" />
+          </>
+        );
+      case "aura":
+        return (
+          <>
+            {/* inner soft aura */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(circle at 50% 30%, rgba(255,255,255,0.18), transparent 60%)",
+              }}
+            />
+
+            {/* outer ambient glow */}
+            <div
+              className="absolute -inset-16 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%)",
+                filter: "blur(24px)",
+              }}
+            />
+          </>
+        );
+
+      case "quote":
+        return (
+          <>
+            {/* top-right opening quote */}
+            <div
+              className="absolute top-2 right-4 text-[140px] leading-none pointer-events-none select-none"
+              style={{
+                color: "rgba(255,255,255,0.06)",
+                fontFamily: "serif",
+                filter: "blur(1px)",
+              }}
+            >
+              “
+            </div>
+
+            {/* bottom-left closing quote */}
+            <div
+              className="absolute bottom-4 left-6 text-[90px] leading-none pointer-events-none select-none"
+              style={{
+                color: "rgba(255,255,255,0.04)",
+                fontFamily: "serif",
+              }}
+            >
+              ”
+            </div>
+          </>
+        );
+
+
+      case "divider":
+        return (
+          <>
+            {/* primary abstract motion sweep */}
+            <div
+              className="absolute -left-24 top-18 w-[170%] h-[160px] pointer-events-none"
+              style={{
+                background: `
+                  radial-gradient(
+                    65% 110% at 28% 50%,
+                    rgba(255,255,255,0.32),
+                    rgba(255,255,255,0.22),
+                    rgba(255,255,255,0.12),
+                    rgba(255,255,255,0.05),
+                    transparent 72%
+                  )
+                `,
+                transform: "rotate(-1deg)",
+                filter: "blur(18px)",
+                opacity: 1,
+              }}
+            />
+
+            {/* secondary echo for depth */}
+            <div
+              className="absolute -right-24 bottom-2 w-[150%] h-[140px] pointer-events-none"
+              style={{
+                background: `
+                  radial-gradient(
+                    55% 95% at 72% 55%,
+                    rgba(255,255,255,0.26),
+                    rgba(255,255,255,0.16),
+                    rgba(255,255,255,0.08),
+                    transparent 70%
+                  )
+                `,
+                transform: "rotate(1deg)",
+                filter: "blur(22px)",
+                opacity: 0.95,
+              }}
+            />
+          </>
+        );
+
+      case "sticky":
+        return (
+          <>
+            <div className="absolute inset-0 rotate-[-1.5deg] bg-black/10" />
+          </>
+        );
+
       case "mesh":
         return (
           <>
