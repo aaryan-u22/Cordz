@@ -10,7 +10,11 @@ import {
   Poppins,
   Montserrat,
   Inter,
-  Raleway
+  Raleway,
+  Caveat,
+  Nunito,
+  Special_Elite,
+  DM_Sans
 } from "next/font/google";
 
 // Modern Sans (Clean, professional)
@@ -84,6 +88,31 @@ export const fontElegant = Raleway({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
+export const fontHandwritten = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
+export const fontRounded = Nunito({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
+export const fontEditorial = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
+export const fontTypewriter = Special_Elite({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+export const fontLuxury = DM_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+});
+
 
 // Map font_key to className
 export const fontClassMap: Record<string, string> = {
@@ -99,4 +128,9 @@ export const fontClassMap: Record<string, string> = {
   geometric: fontGeometric.className,
   minimal: fontMinimal.className,
   elegant: fontElegant.className,
+  handwritten: fontHandwritten.className,
+  rounded: fontRounded.className,
+  editorial: fontEditorial.className,
+  typewriter: fontTypewriter.className,
+  luxury: fontLuxury.className,
 };
