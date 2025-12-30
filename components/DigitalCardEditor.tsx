@@ -31,6 +31,11 @@ const FONT_OPTIONS = [
   { value: "geometric", label: "Geometric" },
   { value: "minimal", label: "Minimal" },
   { value: "elegant", label: "Elegant Sans" },
+  { value: "handwritten", label: "Handwritten" },
+  { value: "rounded", label: "Rounded Soft" },
+  { value: "editorial", label: "Editorial Serif" },
+  { value: "typewriter", label: "Typewriter" },
+  { value: "luxury", label: "Luxury Thin" },
 ];
 
 const TEMPLATE_OPTIONS = [
@@ -50,6 +55,11 @@ const TEMPLATE_OPTIONS = [
   { value: "orbit", label: "Orbit Rings" },
   { value: "gradient", label: "Gradient Flow" },
   { value: "mesh", label: "Mesh Grid" },
+  { value: "letter", label: "Letter" },
+  { value: "aura", label: "Aura Glow" },
+  { value: "quote", label: "Quote" },
+  { value: "divider", label: "Divider" },
+  { value: "sticky", label: "Sticky Note" },
 ];
 
 // Helpers for hex ↔ rgb
